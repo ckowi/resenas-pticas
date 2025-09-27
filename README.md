@@ -1,43 +1,51 @@
-# Astro Starter Kit: Minimal
+# resenas-opticas
+sitio web de reseñas de equipos opticos.
+# Proyecto: Sitio de Reseñas de Óptica
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Este repositorio contiene el código fuente y el contenido para un sitio web de reseñas de productos ópticos (binoculares, telescopios, etc.), construido para ser rápido, escalable y optimizado para SEO.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎯 Objetivo
 
-## 🚀 Project Structure
+El objetivo es crear una plataforma de nicho que ofrezca reseñas de alta calidad, sea fácil de mantener y esté monetizada a través del programa de Afiliados de Amazon. La arquitectura está diseñada para ser modular y con un rendimiento excepcional.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Tech Stack Principal
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+La selección de tecnologías prioriza el rendimiento, la escalabilidad y un flujo de trabajo de desarrollo moderno.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+*   **Framework Frontend**: **Astro** (Generación de sitios estáticos con _Islands Architecture_).
+*   **Gestión de Contenido**: **Markdown/MDX** directamente en el repositorio de Git.
+*   **Hosting y Despliegue Continuo (CI/CD)**: **Netlify** para builds automáticos desde Git y hosting de la aplicación principal.
+*   **Infraestructura de Rendimiento y Datos (Cloudflare)**:
+    *   **CDN y Seguridad**: **Cloudflare CDN** para una entrega de contenido global, seguridad y optimizaciones de rendimiento.
+    *   **Almacenamiento de Medios**: **Cloudflare R2** para almacenar imágenes originales y otros activos de manera económica.
+    *   **Optimización de Imágenes**: **Cloudflare Images** para transformar, optimizar y servir imágenes en formatos modernos (WebP/AVIF) sobre la marcha.
+    *   **Lógica en el Edge**: **Cloudflare Workers** para futuras funciones dinámicas (ver "Expansión a Futuro").
+*   **Estilos**: **Tailwind CSS** para un desarrollo de UI rápido y basado en utilidades.
+*   **SEO**: Herramientas nativas de Astro, generación de sitemaps y marcado estructurado (JSON-LD).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🗺️ Expansión a Futuro
 
-Any static assets, like images, can be placed in the `public/` directory.
+Aunque el MVP (Mínimo Producto Viable) se centrará en un sitio estático, el plan a largo plazo incluye:
 
-## 🧞 Commands
+*   **Backend Serverless**: Desarrollar funciones en **Cloudflare Workers** para manejar lógica del lado del servidor.
+*   **Integración con API de Amazon**: Crear un servicio para interactuar con la **API de Publicidad de Productos de Amazon**, permitiendo obtener datos de productos de forma dinámica y asegurar el cumplimiento.
+*   **Base de Datos**: Integrar una base de datos (posiblemente una solución Edge como Cloudflare D1) para habilitar funcionalidades de usuario como "favoritos", "comparaciones" o "listas guardadas".
 
-All commands are run from the root of the project, from a terminal:
+## ⚡ Cómo Empezar
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1.  **Clonar el repositorio**:
+    ```
+    git clone [URL-DEL-REPOSITORIO]
+    cd [NOMBRE-DEL-REPOSITORIO]
+    ```
+2.  **Instalar dependencias**:
+    ```
+    npm install
+    ```
+3.  **Iniciar el servidor de desarrollo**:
+    ```
+    npm run dev
+    ```
 
-## 👀 Want to learn more?
+El sitio estará disponible en `http://localhost:4321`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
